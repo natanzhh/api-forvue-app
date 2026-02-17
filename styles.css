@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  background-color: green;
+  display: grid;
+  grid-template-rows: 100px;
+}
+header {
+  background-color: blueviolet;
+  align-self:right
+}
+aside {
+  background-color: red;
+}
+article {
+  background-color: yellow;
+}
+section {
+  background-color: grey;
+}
+footer {
+  background-color: orange;
+}
