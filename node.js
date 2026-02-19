@@ -110,12 +110,13 @@ app.get("/tasks", authMiddleware, (req, res) => {
 
 // Atualizar tarefa
 app.put("/tasks/:id", authMiddleware, (req, res) => {
+  console.log("req.params.id", req.params.id);
   const task = tasks.find(
     (t) => t.id == req.params.id && t.userId === req.userId,
   );
-
+  console.log("task", task);
   if (!task) return res.status(404).json({ error: "Tarefa não encontrada" });
-
+  console.log("req.body.title", req.body.title);
   task.title = req.body.title ?? task.title;
   task.completed = req.body.completed ?? task.completed;
 
